@@ -11,6 +11,8 @@ public class Paddle : MonoBehaviour
 
     public float movement;
 
+    public GameObject ball;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -26,7 +28,17 @@ public class Paddle : MonoBehaviour
         }
         else
         {
-            movement = Input.GetAxisRaw("Vertical2");
+            // movement = Input.GetAxisRaw("Vertical2");
+            // Debug.Log("ball:" + ball.transform.position);
+            // Debug.Log("paddle:" + rb.transform.position);
+            if (ball.transform.position.y > rb.transform.position.y)
+            {
+                movement = 1;
+            }
+            else if (ball.transform.position.y < rb.transform.position.y)
+            {
+                movement = -1;
+            }
         }
 
         rb.velocity = new Vector2(rb.velocity.x, movement * speed);

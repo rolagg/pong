@@ -1309,6 +1309,7 @@ MonoBehaviour:
   rb: {fileID: 1295091452}
   startPosition: {x: 0, y: 0, z: 0}
   movement: 0
+  ball: {fileID: 394009290}
 --- !u!1 &1427344985
 GameObject:
   m_ObjectHideFlags: 0
@@ -1719,6 +1720,7 @@ MonoBehaviour:
   rb: {fileID: 1582577186}
   startPosition: {x: 0, y: 0, z: 0}
   movement: 0
+  ball: {fileID: 0}
 --- !u!1 &1628003474
 GameObject:
   m_ObjectHideFlags: 0
