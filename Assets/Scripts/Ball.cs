@@ -16,6 +16,11 @@ public class Ball : MonoBehaviour
         Launch();
     }
 
+    void Update()
+    {
+        rb.velocity = new Vector2(rb.velocity.x * 1.0001f, rb.velocity.y * 1.0001f);
+    }
+
     public void Reset()
     {
         rb.velocity = Vector2.zero;
