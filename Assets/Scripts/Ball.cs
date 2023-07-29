@@ -7,6 +7,7 @@ public class Ball : MonoBehaviour
     public float speed;
     public Rigidbody2D rb;
     public Vector3 startPosition;
+    float timePassed = 0f;
 
     // Start is called before the first frame update
     void Start()
@@ -17,7 +18,13 @@ public class Ball : MonoBehaviour
 
     void Update()
     {
-        rb.velocity = new Vector2(rb.velocity.x * 1.0001f, rb.velocity.y * 1.0001f);
+        timePassed += Time.deltaTime;
+        if (timePassed > 0.1f)
+        {
+            timePassed = 0f;
+            rb.velocity = new Vector2(rb.velocity.x * 1.01f, rb.velocity.y * 1.01f);
+        }
+        
     }
 
     public void Reset()
